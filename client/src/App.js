@@ -1,5 +1,5 @@
 import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
-import Bot from "./Components/Bot";
+
 import Home from "./Components/Home";
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
     <Router>
     <Routes>
       <Route  path="/" element={<Home/>}/>
-      <Route path="/bot" element={<Bot/>}/>
+    
       </Routes>
     </Router>
     </div>

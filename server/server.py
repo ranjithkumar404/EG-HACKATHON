@@ -13,7 +13,7 @@ CORS(app)
 # Define your translation function or model here
 def translate_to_python(vb_code):
     try:
-        file_path = 'q_learning_model1.pkl'
+        file_path = 'q_learning_agent11.pkl'
 
 
         with open(file_path, 'rb') as f:
@@ -41,10 +41,11 @@ def translate_to_python(vb_code):
 def translate():
     try:
         # Get the code from the request
+        print("we got the code at serverr")
         data = request.get_json()
         #print("data", data)
         vb_code = data['code']
-        print("vb_code", vb_code)
+        print("data has been extracted")
         #print(code_to_translate)
         # Process the code (translate VB to Python)
         translated_code = translate_to_python(vb_code)
